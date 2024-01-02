@@ -1,0 +1,60 @@
+
+// Tokyo Forex Software
+// Developer: Forex Robot Easy Team
+// Website: forexroboteasy.com
+
+// Function to retrieve current price for a given symbol
+double GetSymbolPrice(string symbol){
+    // Code logic to retrieve current price for the given symbol
+    // Return the current price
+}
+
+// Function to normalize prices using the 'sliding' algorithm
+double NormalizePrice(double price, double period){
+    // Code logic to normalize prices using the 'sliding' algorithm
+    // Return the normalized price
+}
+
+// Function to train the recurrent neural network for trading decisions
+void TrainNeuralNetwork(){
+    // Code logic to train the recurrent neural network using historical data
+}
+
+// Function to make trading decisions based on the trained neural network
+void MakeTradingDecisions(){
+    // Code logic to make trading decisions based on the trained neural network
+}
+
+// Main function for the Tokyo trading robot
+int start(){
+    // Set the desired symbols to trade
+    string[] symbols = {'AUDUSD', 'EURUSD', 'GBPUSD', 'USDCAD', 'USDCHF', 'USDJPY'};
+    
+    // Loop through each symbol
+    for(int i=0; i<ArraySize(symbols); i++){
+        string symbol = symbols[i];
+        
+        // Retrieve current price for the symbol
+        double currentPrice = GetSymbolPrice(symbol);
+        
+        // Normalize the price using the 'sliding' algorithm
+        double normalizedPrice = NormalizePrice(currentPrice, 14);
+        
+        // Make trading decisions based on the normalized price
+        if(normalizedPrice > 0){
+            // Buy the symbol
+        } else if(normalizedPrice < 0){
+            // Sell the symbol
+        } else {
+            // Do nothing
+        }
+    }
+    
+    // Train the neural network for trading decisions
+    TrainNeuralNetwork();
+    
+    // Make trading decisions based on the trained neural network
+    MakeTradingDecisions();
+    
+    return 0;
+}
